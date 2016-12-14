@@ -9,5 +9,7 @@ https://github.com/ethereum/go-ethereum/wiki/geth
 
 - Set up private network with some ether
 - Compile contract written in solidity using online solidity compiler, and deploy on private network created
+Contract is https://github.com/SusruthaGongalla/TranscriptVerificationDApp/blob/master/StudentTranscripHashContract.txt
+Online compiler used can be found at https://ethereum.github.io/browser-solidity/
 - Start ethereum with RPC enabled. DApp will interact with ethereum via RPC
 
