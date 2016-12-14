@@ -1,0 +1,24 @@
+pragma solidity ^0.4.2;
+
+contract TranscriptHashStore3 {
+
+	struct student{
+	    string studentID;
+	    string transcriptHash;
+	}
+	
+	mapping (string => student) studentTranscripts;
+	
+	function storeHash(string student_id, string hash_value) returns(bool sufficient) {
+		student memory s;
+		s.studentID = student_id;
+		s.transcriptHash = hash_value;
+		studentTranscripts[student_id] = s;
+		return true;
+	}
+
+	function getHash(string student_id) constant returns(string) {
+		student s = studentTranscripts[student_id];
+	    return s.transcriptHash;
+	}
+}
